@@ -1,0 +1,51 @@
+<div class="container mt-5">
+  <div class="row mb-3">
+    <div class="col">
+      <div class="form-floating">
+        <input
+          type="datetime-local"
+          id="inputFechaInicio"
+          class="form-control input-black classcolor"
+          [(ngModel)]="fecha1"
+        />
+        <label for="inputFechaInicio" class="form-label">Fecha inicio:</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-floating">
+        <input
+          type="datetime-local"
+          id="inputFechaFin"
+          class="form-control input-black classcolor"
+          [(ngModel)]="fecha2"
+        />
+        <label for="inputFechaFin" class="form-label">Fecha fin:</label>
+      </div>
+    </div>
+    <div class="col">
+      <button class="btn btn btn-danger btn-guardar" (click)="getfiltro(fecha1,fecha2)">Filtrar</button>
+    </div>
+  </div>
+  <table class="table table-striped text-center colortabla">
+    <thead>
+      <tr>
+        <th>#id</th>
+        <th>Tipo Vehículo</th>
+        <th>Placa</th>
+        <th>Hora ingreso</th>
+        <th>Hora salida</th>
+        <th>Valor pagado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ArregloData of ArregloData">
+        <td>{{ ArregloData.idVehiculo }}</td>
+        <td>{{ ArregloData.tipoVehiculo }}</td>
+        <td>{{ ArregloData.placa }}</td>
+        <td>{{ ArregloData.horaIngreso }}</td>
+        <td>{{ ArregloData.horaSalida }}</td>
+        <td>{{ ArregloData.valorPagado }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

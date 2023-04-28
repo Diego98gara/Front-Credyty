@@ -1,0 +1,74 @@
+<div class="EstiloF">
+  <div class="container">
+    <div class="textoalin">
+      <div class="colortext mt-3">
+        <h2>Si cuentas con número de factura, ingrésalo</h2>
+        <div class="form-group">
+          <label for="placa" class="labled">Número Factura:</label>
+          <input
+            type="text"
+            class="form-control input-black classcolor"
+            id="placa"
+            name="placa"
+            [(ngModel)]="valorPagar"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div
+        class="col-sm-6 col-md-4 col-lg-3 mb-5"
+        *ngFor="let ArregloData of paginatedData"
+      >
+        <div class="card mt-5" style="width: 18rem">
+          <div class="card-body contenidocard text-center">
+            <h5 class="card-title">Tipo Vehículo</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">
+              {{ ArregloData.tipoVehiculo }}
+            </h6>
+            <h5 class="card-title">Número De placa</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">
+              {{ ArregloData.placa }}
+            </h6>
+
+            <h5 class="card-title">Hora Ingreso</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">
+              {{ ArregloData.horaIngreso }}
+            </h6>
+
+            <button
+              type="button"
+              class="btn btn-danger mt-4 btn-guardar"
+              (click)="
+              salidavehiculo(ArregloData.tipoVehiculo, ArregloData.idVehiculo,ArregloData)
+              "
+            >
+              Desaparcar
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger mt-4 btn-guardar"
+              (click)="
+                valorApagar(ArregloData.tipoVehiculo, ArregloData.idVehiculo)
+              "
+            >
+              Valor a pagar
+            </button>
+            <span *ngIf="ArregloData.idVehiculo === tarjetaSeleccionada">
+              <h6 class="mt-3 saldo">$ {{ Total }}</h6>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ngb-pagination
+      [(page)]="currentPage"
+      [pageSize]="pageSize"
+      [collectionSize]="this.ArregloData.length"
+      class="mt-5 EstiloPaginador justify-content-center"
+      (pageChange)="getPaginatedData()"
+    ></ngb-pagination>
+  </div>
+</div>

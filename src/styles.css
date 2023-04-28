@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url("../src/assets/img/Parqueadero.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    scrollbar-width: thin;
+    scrollbar-color: #666 #000;
+}
+
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #000;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #666;
+    border-radius: 5px;
+}
+
+.input-black {
+    border: none;
+    color: #fff !important;
+    background-color: rgb(102 43 43 / 81%) !important;
+}
+
+.classcolor:focus {
+    border-color: white;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+
+
+.btn-guardar {
+    background-color: #4e0505;
+    color: #fff;
+    width: 150px;
+    border-color: #fff;
+}
+
+.btn-guardar:hover {
+    background-color: #000000;
+}
+
+.colortitulo
+{
+    color: #fff !important;
+    padding: 16px;
+}
+
+.classlabe{
+    padding-left: 1% !important;
+    margin-bottom: 2% !important;
+}

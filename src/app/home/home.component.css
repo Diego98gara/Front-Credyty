@@ -1,0 +1,49 @@
+.transparent-background {
+    background-color: transparent;
+}
+
+
+
+.labled {
+    color: #fff;
+    font-size: 23px;
+}
+
+.overlay {
+    background-color: rgb(0 0 0 / 70%) !important;
+    border-radius: 9rem;
+}
+
+.paddingd {
+    padding: 20px;
+}
+
+
+
+form {
+    max-width: 478px;
+    /* Ajustar el ancho máximo del formulario */
+    margin: 0 auto;
+    /* Centrar el formulario */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    /* Separación entre los inputs */
+}
+
+.form-control {
+    padding: 10px;
+    /* Ajustar el padding de los inputs */
+}
+
+
+
+.margen{
+    padding-bottom: 5%;
+}
+
+:host {
+    display: block;
+    overflow: hidden;
+  }

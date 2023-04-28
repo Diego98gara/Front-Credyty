@@ -1,0 +1,40 @@
+.EstiloF {
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    background-color: rgb(0 0 0 / 68%) !important;
+    color: #fff !important;
+}
+
+.text-body-secondary {
+    --bs-text-opacity: 1;
+    color: rgb(237 241 8 / 88%) !important;
+}
+
+.EstiloPaginador .pagination {
+    justify-content: center;
+  }
+
+.EstiloPaginador .container {
+    clear: both;
+} 
+
+.colortext {
+    background-color: rgb(0 0 0 / 68%) !important;
+    color: #ffeb00 !important;
+    padding: 24px;
+    width: 24%;
+    text-align: center;
+}
+.colortexts{
+    background-color: rgb(0 0 0 / 68%) !important;
+    padding: 24px;
+} 
+.textoalin{
+    text-align: -webkit-center;
+}
+.saldo{
+    font-size: 33px;
+}

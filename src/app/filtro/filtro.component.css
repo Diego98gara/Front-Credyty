@@ -1,0 +1,20 @@
+.colortabla{
+    background-color: rgb(0 0 0 / 73%) !important;
+    color: #fff;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-accent-bg: var(--bs-table-striped-bg);
+    color: #ffffff;
+}
+.filtrotable {
+    margin-bottom: 1rem!important;
+    background-color: rgb(18 18 18 / 81%) !important;
+    width: 61%;
+    padding: 2%;
+    color: #fff;
+}
+.classlabe{
+    padding-left: 1% !important;
+    margin-bottom: 2% !important;
+}
